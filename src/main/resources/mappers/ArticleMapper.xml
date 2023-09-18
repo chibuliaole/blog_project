@@ -7,7 +7,21 @@
         select  * from article
     </select>
 
-    <select id="queryList" resultType="article">
+    <resultMap id="queryListMap" type="article">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="cid" property="cid"/>
+        <result column="uid" property="uid"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <association property="user" javaType="com.maomao.pojo.User">
+            <id column="uid" property="uid"></id>
+            <result column="username" property="username"></result>
+        </association>
+    </resultMap>
+
+    <select id="queryList" resultMap="queryListMap">
         select article.*,user.username from article,user
         <where>
             article.uid = user.uid

@@ -15,4 +15,5 @@ public class Article {
     private Integer uid;
     private Date createTime;
     private Date updateTime;
+    private User user;
 }
