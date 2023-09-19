@@ -57,4 +57,9 @@ public class CategoryServiceImpl implements CategoryService {
         map.put("list",list);
         return map;
     }
+
+    @Override
+    public Integer getCategoryCount() {
+        return categoryMapper.getCategoryCount();
+    }
 }

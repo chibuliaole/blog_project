@@ -16,4 +16,6 @@ public interface ArticleService {
     void updateArticle(Article article);
 
     void deleteArticle(Integer id);
+
+    Integer getArticleCount();
 }

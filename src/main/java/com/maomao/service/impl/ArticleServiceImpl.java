@@ -45,4 +45,9 @@ public class ArticleServiceImpl implements ArticleService {
     public void deleteArticle(Integer id) {
         articleMapper.deleteArticle(id);
     }
+
+    @Override
+    public Integer getArticleCount() {
+        return articleMapper.getArticleCount();
+    }
 }

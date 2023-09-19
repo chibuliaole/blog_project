@@ -31,4 +31,8 @@
             </if>
         </where>
     </select>
+
+    <select id="getCategoryCount" resultType="java.lang.Integer">
+        select count(1) from category
+    </select>
 </mapper>

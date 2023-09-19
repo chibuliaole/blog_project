@@ -17,4 +17,6 @@ public interface CategoryService {
     void deleteCategory(Integer cid);
 
     Map<String,Object> queryListPage(Integer current, Integer limit, Category category);
+
+    Integer getCategoryCount();
 }

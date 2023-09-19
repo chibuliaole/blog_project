@@ -57,4 +57,11 @@ public class UserController {
         userService.updateUser(user);
         return Result.ok();
     }
+
+    @Operation(summary = "查询用户总数")
+    @GetMapping("/getUserCount")
+    public Result getUserCount(){
+        Integer count = userService.getUserCount();
+        return Result.ok(count);
+    }
 }

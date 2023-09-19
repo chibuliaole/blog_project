@@ -64,4 +64,11 @@ public class CategoryController {
         return Result.ok(categoryMap);
     }
 
+    @Operation(summary = "获取分类总数")
+    @GetMapping("/getCategoryCount")
+    public Result getCategoryCount(){
+        Integer count = categoryService.getCategoryCount();
+        return Result.ok(count);
+    }
+
 }

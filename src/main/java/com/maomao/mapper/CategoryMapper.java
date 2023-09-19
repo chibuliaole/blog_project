@@ -18,4 +18,6 @@ public interface CategoryMapper {
     void deleteCategory(Integer cid);
 
     List<Category> queryListByCondition(Category category);
+
+    Integer getCategoryCount();
 }

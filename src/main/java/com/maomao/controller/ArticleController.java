@@ -62,4 +62,11 @@ public class ArticleController {
         return Result.ok();
     }
 
+    @Operation(summary = "获取文章总数")
+    @GetMapping("/getArticleCount")
+    public Result getArticleCount(){
+        Integer count = articleService.getArticleCount();
+        return Result.ok(count);
+    }
+
 }

@@ -50,4 +50,9 @@ public class UserServiceImpl implements UserService {
         userMapper.updateUser(user);
 
     }
+
+    @Override
+    public Integer getUserCount() {
+        return userMapper.getUserCount();
+    }
 }

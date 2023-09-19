@@ -49,4 +49,8 @@
     <delete id="deleteArticle">
         delete from article where id = #{id}
     </delete>
+
+    <select id="getArticleCount" resultType="Integer">
+        select count(1) from article
+    </select>
 </mapper>

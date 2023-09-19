@@ -20,4 +20,8 @@
     <update id="updateUser">
         update user set phone = #{phone},introduction = #{introduction} where uid = #{uid}
     </update>
+
+    <select id="getUserCount" resultType="java.lang.Integer">
+        select count(1) from user
+    </select>
 </mapper>

@@ -10,4 +10,6 @@ public interface UserService {
     User getUserById(Integer uid);
 
     void updateUser(User user);
+
+    Integer getUserCount();
 }

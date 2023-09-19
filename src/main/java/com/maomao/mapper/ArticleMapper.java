@@ -18,4 +18,6 @@ public interface ArticleMapper {
     void updateArticle(Article article);
 
     void deleteArticle(Integer id);
+
+    Integer getArticleCount();
 }
