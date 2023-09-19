@@ -22,14 +22,14 @@
     </resultMap>
 
     <select id="queryList" resultMap="queryListMap">
-        select article.*,user.username from article,user
+        select article.*,user.username from article
+        left join user on user.uid = article.uid
         <where>
-            article.uid = user.uid
             <if test="cid != null">
                and cid = #{cid}
             </if>
             <if test="uid != null">
-               and uid = #{uid}
+               and article.uid = #{uid}
             </if>
         </where>
     </select>
